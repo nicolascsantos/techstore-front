@@ -1,11 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+﻿<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStore - Página Inicial</title>
+    <title>Tech Store - Página Inicial</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+    <div class="container">
+
+        <h1>TechStore</h1>
+        <h2>Catálogo de Produtos</h2>
+
+        <p class="status">
+            Produtos cadastrados no Azure SQL.
+        </p>
+
+        <div class="adicionar-produto">
+            <label>Produto: </label>
+            <input type="text" placeholder="Ex: Teclado" id="nmProduto" />
+            <label>Valor unitário: </label>
+            <input type="number" placeholder="Ex: 30,00" id="valorUnitarioProduto"/>
+            <label>Quantidade: </label>
+            <input type="text" placeholder="Ex: 10" id="quantidadeEmEstoqueProduto"/>
+            <button type="submit" onclick="adicionarProduto();">Adicionar</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabela-produtos">
+                <tr>
+                    <td colspan="4">Carregando produtos...</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
