@@ -1,5 +1,5 @@
 ﻿async function carregarProdutos() {
-    const resposta = await fetch('/api/produto', { method: 'GET' });
+    const resposta = await fetch('https://techstoreinfnet-b5hhfugfhbdddqed.westus3-01.azurewebsites.net/api/produto', { method: 'GET' });
     const produtos = await resposta.json();
     console.log(produtos);
 
