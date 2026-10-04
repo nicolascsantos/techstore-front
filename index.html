@@ -23,7 +23,9 @@
             <input type="number" placeholder="Ex: 30,00" id="valorUnitarioProduto"/>
             <label>Quantidade: </label>
             <input type="text" placeholder="Ex: 10" id="quantidadeEmEstoqueProduto"/>
-            <button type="submit" onclick="adicionarProduto();">Adicionar</button>
+            <button type="button" id="adicionar-produto" onclick="adicionarProduto();">Adicionar</button>
+            <button type="button" id="salvar-produto" onclick="atualizarProduto();" hidden>Salvar alterações</button>
+            <button type="button" id="cancelar-edicao" onclick="window.location.reload();" hidden>Cancelar</button>
         </div>
 
         <table>
@@ -33,12 +35,13 @@
                     <th>Produto</th>
                     <th>Preço</th>
                     <th>Estoque</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
 
             <tbody id="tabela-produtos">
                 <tr>
-                    <td colspan="4">Carregando produtos...</td>
+                    <td colspan="5">Carregando produtos...</td>
                 </tr>
             </tbody>
         </table>
